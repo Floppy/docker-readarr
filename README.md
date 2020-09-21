@@ -1,12 +1,18 @@
 # [floppy/readarr](https://github.com/floppy/docker-readarr)
 
-## Supported Architectures
+This is a Docker image for [Readarr](https://github.com/Readarr/Readarr), forked from
+the [Sonarr image from Linuxserver.io](https://github.com/linuxserver/docker-sonarr).
+If you've used their images before, you'll be OK here.
+
+## Architectures
 
 | Architecture | Tag |
 | :----: | --- |
 | x86-64 | amd64-unstable |
 | arm64 | arm64-unstable |
 | armhf | armhf-unstable |
+
+`armhf` is tested, the others aren't, but are built consistently so should work?
 
 ### docker
 
