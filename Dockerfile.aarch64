@@ -16,7 +16,7 @@ RUN \
  echo "**** install packages ****" && \
  apt-get update && \
  apt-get install -y \
-        libicu66 && \
+        libicu60 && \
  echo "**** install Readarr ****" && \
  mkdir -p /app/readarr/bin && \
  curl -o \
