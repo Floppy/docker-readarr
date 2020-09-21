@@ -4,8 +4,8 @@ UMASK_SET=${UMASK_SET:-022}
 
 umask "$UMASK_SET"
 
-cd /app/sonarr/bin || exit
+cd /app/readarr/bin || exit
 
 exec \
-	s6-setuidgid abc mono --debug NzbDrone.exe \
+	s6-setuidgid abc /app/readarr/bin/Readarr \
 	-nobrowser -data=/config
