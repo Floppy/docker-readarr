@@ -8,9 +8,9 @@ If you've used their images before, you'll be OK here.
 
 | Architecture | Tag |
 | :----: | --- |
-| x86-64 | amd64-unstable |
-| arm64 | arm64-unstable |
-| armhf | armhf-unstable |
+| arm64 | nightly |
+| armhf | nightly |
+| amd64 | nightly |s
 
 `armhf` is tested, the others aren't, but are built consistently so should work?
 
@@ -56,3 +56,7 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
   $ id username
     uid=1000(dockeruser) gid=1000(dockergroup) groups=1000(dockergroup)
 ```
+
+## Building the image yourself
+
+Clone this repo, and then `make READARR_VERSION=0.1.0.338` or whichever version you want.s

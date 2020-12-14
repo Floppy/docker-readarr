@@ -1,11 +1,8 @@
 FROM lsiobase/mono:LTS
 
-# set version label
-ARG BUILD_DATE
-ARG VERSION
 ARG READARR_VERSION
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="aptalca"
+LABEL build_version="${READARR_VERSION}"
+LABEL maintainer="floppy"
 
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -21,7 +18,7 @@ RUN \
  mkdir -p /app/readarr/bin && \
  curl -o \
 	/tmp/readarr.tar.gz -L \
-	"https://readarr.servarr.com/v1/update/nightly/updatefile?version=${READARR_VERSION}&os=linux&runtime=netcore&arch=x64" && \
+	"https://readarr.servarr.com/v1/update/nightly/updatefile?version=${READARR_VERSION}&os=linux&runtime=netcore&arch=arm" && \
  tar xf \
 	/tmp/readarr.tar.gz -C \
 	/app/readarr/bin --strip-components=1 && \
